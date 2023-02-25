@@ -1,4 +1,5 @@
 - hosts: all
+  remote_user: edureka
   gather_facts: no
   tasks:
     - name: create build directory
