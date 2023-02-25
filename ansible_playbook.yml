@@ -4,22 +4,22 @@
   tasks:
     - name: create build directory
       file:
-        path: /home/edureka/ansible_project
+        path: /home/edureka/ansible_project1
         state: directory
-        owner: root
-        group: root
+        owner: edureka
+        group: edureka
         mode: '0755'
     - name: copy Dockerfile
       copy:
         src: ./Dockerfile
-        dest: /home/edureka/ansible_project
-        owner: root
-        group: root
+        dest: /home/edureka/ansible_project1
+        owner: edureka
+        group: edureka
         mode: '0644'
     - name: build container image
       docker_image:
         name: democontainer:v1.0
         build:
-          path: /home/edureka/ansible_project
+          path: /home/edureka/ansible_project1
           source: build
         state: present
