@@ -17,6 +17,7 @@
         group: edureka
         mode: '0644'
     - name: build container image
+      community.docker.docker_image:
       docker_image:
         name: 3af4f921caafb0274b20b808af55b1493fe80a1d:latest
         build:
