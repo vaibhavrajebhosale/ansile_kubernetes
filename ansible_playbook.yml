@@ -4,7 +4,7 @@
 
   tasks:
     - name: building docker image using war file
-      command: docker build -t 3af4f921caafb0274b20b808af55b1493fe80a1d-docker-image .
+      command: docker build -t abctech-docker-image .
       args:
-        chdir: /home/edureka/ansible_repo/Ansible_docker
+        chdir: /home/edureka/vaibhav/deployFiles
 
