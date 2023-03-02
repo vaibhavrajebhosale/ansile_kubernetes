@@ -8,3 +8,6 @@
       args:
         chdir: /home/edureka/ansible_repo/Ansible_docker
 
+    - name: building docker container out of image
+      command: docker run -d --name abctech-docker-container -p 1585:8080 abctech-docker-image
+
