@@ -6,5 +6,5 @@
     - name: building docker image using war file
       command: docker build -t abctech-docker-image .
       args:
-        chdir: /home/edureka/vaibhav/deployFiles
+        chdir: /home/edureka/ansible_repo/Ansible_docker
 
