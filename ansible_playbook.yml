@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: kmaster
   remote_user: edureka
   gather_facts: no
 
