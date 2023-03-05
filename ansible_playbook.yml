@@ -6,7 +6,7 @@
     - name: Stop the abctech-docker-container container
       docker_container:
         name: abctech-docker-container
-        state: stopped
+        state: absent
         
     - name: building docker image using war file
       command: docker build -t abctech-docker-image .
