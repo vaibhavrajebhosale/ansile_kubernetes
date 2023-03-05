@@ -8,6 +8,11 @@
       args:
         chdir: /home/edureka/ansible_repo/Ansible_docker
 
+    - name: Stop the abctech-docker-container container
+      docker_container:
+        name: abctech-docker-container
+        state: stopped
+        
     - name: building docker container out of image
       command: docker run -d --name abctech-docker-container -p 1585:8080 abctech-docker-image
 
