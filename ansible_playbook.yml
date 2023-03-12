@@ -3,10 +3,12 @@
   gather_facts: no
 
   tasks:
-    - name: Stop the abctech-docker-container container
+    - name: Terminate Old Application
       docker_container:
         name: abctech-docker-container
         state: absent
+        register: reset
+    - debug: var=reset.stdout_lines
         
     - name: building docker image using war file
       command: docker build -t abctech-docker-image .
@@ -15,4 +17,5 @@
         
     - name: building docker container out of image
       command: docker run -d --name abctech-docker-container -p 1585:8080 abctech-docker-image
+      register: deploy
 
