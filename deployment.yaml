@@ -1,0 +1,20 @@
+Namespace: abctech-namespace
+metadata:
+  name: abctech-deployment
+  labels:
+     app: abctechapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: abctechapi
+  template:
+    metadata:
+      labels:
+        app: abctechapi
+    spec:
+      containers:
+      - name: abctech-docker-container
+        image: abctech-docker-image:latest
+        ports:
+        - containerPort: 8080
