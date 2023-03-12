@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+Namespace: abctech-namespace
+metadata:
+  name: abctech-docker-image
+  labels:
+    app: latest
+    tier: frontend
+spec:
+  containers:
+  - name: abctech-docker-container
+    image: abctech-docker-image
